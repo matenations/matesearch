@@ -115,6 +115,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   registerLibraryRoutes(app);
+  
+  // Song info endpoint for video and lyrics
+  app.use('/api/song-info', (await import('./routes/song-info')).default);
+  
   // AI music card suggestions after first search
   app.post("/api/ai/suggestions", async (req, res) => {
     try {

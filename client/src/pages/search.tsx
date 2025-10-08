@@ -9,6 +9,7 @@ import { SearchResult } from "@shared/schema";
 import { FilterPanel } from "@/components/filter-panel";
 import { VibeMatchModal } from "@/components/vibe-match-modal";
 import { AIAssistant } from "@/components/ai-assistant";
+import { SongVideoLyrics } from "@/components/song-video-lyrics";
 
 
 export default function SearchPage() {
@@ -244,6 +245,10 @@ export default function SearchPage() {
             </div>
           </div>
         )}
+        
+        {/* Song Video & Lyrics Card */}
+        {activeQuery && <SongVideoLyrics searchQuery={activeQuery} />}
+        
         {isLoading ? (
           <div className="space-y-4">
             {[...Array(6)].map((_, i) => (

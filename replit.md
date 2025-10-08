@@ -55,6 +55,18 @@ Mate is a powerful music search engine with AI-powered vibe matching capabilitie
 - **Typography**: Inter (body), Poppins (display), JetBrains Mono (mono)
 - **Effects**: Glassmorphism with backdrop-blur, gradient animations
 
+## Recent Changes (October 8, 2025)
+- **Song Video & Lyrics Card Feature - COMPLETED**:
+  - ✅ Added Song Video & Lyrics card component below AI answer on search results page
+  - ✅ Displays embedded YouTube video for searched songs
+  - ✅ Shows song lyrics fetched from Lyrics.ovh API
+  - ✅ Graceful error handling - displays error messages instead of silent failures
+  - ✅ Shows lyrics-only state when video unavailable with explanatory message
+  - ✅ Backend API route `/api/song-info` extracts video ID and fetches lyrics
+  - ✅ Works with "Artist - Song" format for optimal results
+  - ✅ Link to Google for additional lyrics sources
+  - Note: YouTube video embedding requires valid YouTube API credentials (401 errors indicate missing/expired credentials)
+
 ## Recent Changes (October 6, 2025)
 - **Puter.js AI Integration & Search/Filter Fixes - COMPLETED**:
   - ✅ Integrated Puter.js for free, unlimited AI access (following https://developer.puter.com/tutorials/free-unlimited-openai-api/)
